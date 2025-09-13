@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga with Kapil</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   <header class="header-with-images fade-section">
+    <img src="images/yoga_om_image.jpg" alt="Om Symbol" class="side-image glow-image">
+    
+    <div class="header-text">
+        <h1>Yoga with Kapil</h1>
+        <p>Yog • Ved • Balance • Strength • Mindfulness</p>
+    </div>
+    
+    <img src="images/yoga_talk_image.jpg" alt="Yoga Talks" class="side-image glow-image">
+</header>
+    
+    <section class="about fade-section">
+    <h2>Yog Acharya & Ved Acharya Vishnu Vallabh</h2>
+	<h3>Dr. Kapil Kapadia</h3>
+    <p>
+    Registered Yoga Teacher (<strong>RYT 600</strong>) – <strong>Yoga Alliance Certified.</strong><br>
+    Specialised in <strong>Medical Yoga Therapy</strong> for <strong>hypertension</strong>, <strong>heart health</strong> and <strong>diabetes management</strong>.<br>
+    A scholar of the <strong>Vedas & Puranas</strong>, bringing spiritual depth to physical practice with <strong>12+ years</strong> of experience and over <strong>2,000 students</strong> trained.
+<ul class="checklist">
+    <li><strong>Online</strong> & <strong>Offline</strong> Classes</li>
+    <li>In-Studio & <strong>Home Sessions</strong></li>
+    <li>Personalised Guidance for <strong>Every Age</strong></li>
+</ul>
+	</p>
+
+    <section class="gallery">
+    <h2>Gallery</h2>
+    <img src="images/yoga8.jpg" alt="Yoga Pose">
+    <img src="images/yoga5.jpg" alt="Meditation">
+    <img src="images/yoga6.jpg" alt="Yoga Class">
+    <img src="images/yoga16.jpg" alt="Yoga Pose">
+    <img src="images/yoga7.jpg" alt="Yoga Pose">
+    <img src="images/yoga17.jpg" alt="Yoga Pose">
+    <img src="images/yoga18.jpg" alt="Yoga Pose">
+    </section>
+
+    <section class="quote fade-section">
+        <blockquote>
+            <em><strong>Yoga is to purify our actions, Yoga is to control the mind and senses and Yoga is to link one-self to the supreme with devotion.<strong></em>
+        </blockquote>
+	</section>
+				
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <a class="whatsapp-button" href="https://wa.me/919923351543?text=I'm%20interested%20in%20your%20Yoga%20classes.%20Please%20share%20more%20details." target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"/> WhatsApp
+        </a>
+	<a class="social-button" href="https://www.instagram.com/yogacharya.vishnu.vallabh" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" alt="Instagram" />
+            Instagram
+        </a>
+    </section>
+
+				
+<!-- Floating Calendar Button -->
+<button id="timetableBtn" class="floating-btn">
+    📅 Timetable
+</button>
+
+<!-- Timetable Modal -->
+<div id="timetableModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	  
+    <h2>Class Timetable (IST)</h2>
+    <table>
+      <tr><th>Day</th><th>Time</th><th>Type</th></tr>
+      <tr><td>Mon – Fri</td><td>4 AM, 5 AM, 10:30 AM</td><td>Online</td></tr>
+      <tr><td>Mon – Fri</td><td>3:30 PM, 4:30 PM, 5:30 PM</td><td>Online</td></tr>
+      <tr><td>Meditation</td><td>11:15 AM, 9:30 PM, 10 PM</td><td>Online</td></tr>
+    </table>
+
+    <h2>Class Timetable (CT)</h2>
+    <table>
+      <tr><th>Day</th><th>Time</th><th>Type</th></tr>
+      <tr><td>Sun – Thu</td><td>6:30 PM CT</td><td>Online</td></tr>
+      <tr><td>Mon – Fri</td><td>5 AM, 6 AM, 7 AM</td><td>Online</td></tr>
+      <tr><td>Saturday Special</td><td>10 AM</td><td>Sun Salutations</td></tr>
+    </table>
+  </div>
+</div>
+
+<script>
+  // Get modal and button Java for flaoting button 
+  var modal = document.getElementById("timetableModal");
+  var btn = document.getElementById("timetableBtn");
+  var span = document.getElementsByClassName("close")[0];
+
+  // Open modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // Close modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Close when clicking outside
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+ </script>
+
+<!-- Footer section for rights reserved and developed by -->
+<footer>
+  <p class="copyright">© <span id="year"></span> Yoga with Kapil. All Rights Reserved.</p>
+  <p class="dev-note">Developed by Chaitanya Chikhalikar</p>
+</footer>
+
+<script>
+  // auto update year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+				<!-- Om Audio -->
+<audio id="omAudio" src="assets/Om.mp3"></audio>
+
+<!-- Fallback Button (only shows if autoplay blocked) -->
+<button id="playOmBtn" style="display:none;">🔊 Play Om</button>
+
+<script>
+	const audio = document.getElementById("omAudio");
+    const playBtn = document.getElementById("playOmBtn");
+
+ // Force reset safeguard on every load
+  audio.pause();
+  audio.currentTime = 0;
+  audio.volume = 0; // reset to full volume before fade-in logic
+	
+// Detect mobile
+const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+// Fade durations
+const fadeStep = isMobile ? 0.05 : 0.02;   // faster ramp-up on mobile
+const fadeInterval = isMobile ? 100 : 150; // shorter interval on mobile
+	
+// Fade-in audio
+function fadeIn(audio) {
+  audio.volume = 0;
+  return audio.play().then(() => {
+    let vol = 0;
+    const fade = setInterval(() => {
+      if (vol < 1) {
+        vol += 0.02;
+        audio.volume = vol;
+      } else {
+        clearInterval(fade);
+      }
+    }, 150);
+  });
+}
+
+// Fade-out audio
+function fadeOut(audio) {
+  let vol = audio.volume;
+  const fade = setInterval(() => {
+    if (vol > 0.01) {
+      vol -= 0.02;
+      audio.volume = Math.max(vol, 0);
+    } else {
+      clearInterval(fade);
+      audio.pause();
+      audio.currentTime = 0;
+      hideButton(); // disappear after finish
+    }
+  }, 150);
+}
+
+// Smoothly hide the button
+function hideButton() {
+  if (playBtn && playBtn.style.display !== "none") {
+    playBtn.classList.add("fade-out");
+    setTimeout(() => playBtn.style.display = "none", 600);
+  }
+}
+
+	
+// Play Om with restart protection
+function playOmOnce() {
+  if (!audio.paused) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+  fadeIn(audio).then(() => {
+    hideButton(); // hide button immediately if visible
+    setTimeout(() => fadeOut(audio), 6000);
+  });
+}
+
+	// Unlock handler (runs once on first interaction)
+function enableAudio() {
+  playOmOnce();
+  removeAllListeners();
+}
+
+// Remove all unlock listeners
+function removeAllListeners() {
+  ["click","touchstart","keydown","scroll","wheel"].forEach(ev => {
+    document.removeEventListener(ev, enableAudio);
+  });
+}
+	
+ // Main logic
+window.addEventListener("load", () => {
+  fadeIn(audio).then(() => {
+    // ✅ Om autoplay worked → never show button
+    setTimeout(() => fadeOut(audio), 6000);
+  }).catch(() => {
+    // ❌ Autoplay blocked → add interaction listeners
+    if (isMobile) {
+      // 📱 Mobile/Tablet → scroll/touch/click
+      document.addEventListener("touchstart", enableAudio, { once: true });
+	  document.addEventListener("touchmove", enableAudio, { once: true, passive: true }); // ✅ catches swipe even if no real scroll
+      document.addEventListener("scroll", enableAudio, { passive: true });
+      document.addEventListener("click", enableAudio, { once: true });
+    } else {
+      // 💻 Laptop/Desktop → scroll/click/keydown/trackpad
+      document.addEventListener("click", enableAudio, { once: true });
+      document.addEventListener("scroll", enableAudio, { passive: true });
+      document.addEventListener("keydown", enableAudio, { once: true });
+      document.addEventListener("wheel", enableAudio, { once: true, passive: true }); // ✅ for mouse wheel / touchpad scrolls
+    }
+
+     // Show fallback button only after 8s if still paused
+    setTimeout(() => {
+      if (audio.paused) playBtn.style.display = "block";
+    }, 8000);
+  });
+});
+
+ // Fallback button → play Om, then fade out and disappear forever
+playBtn.addEventListener("click", () => {
+  playOmOnce();
+});
+</script>
+				
+</script>
+
+
+           </body>
+			</html>
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
