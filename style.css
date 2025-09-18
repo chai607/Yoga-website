@@ -93,7 +93,7 @@ h2 {
     margin-right: 8px;
 }
 
-/* Flexbox header with images on both sides */
+/* --Flexbox header with images on both sides-- */
 .header-with-images {
     display: flex;
     align-items: center;
@@ -103,12 +103,12 @@ h2 {
     margin: 20px 0;
 }
 
-/* Center text block */
+/* --- Center text block ---*/
 .header-text {
     flex: 1;
 }
 
-/* Side images */
+/*--- Side images ---*/
 .side-image {
     width: 100px;
     height: 100px;
@@ -123,7 +123,7 @@ h2 {
     border-radius: 12px;
 }
 
-/* Mobile responsive: stack vertically */
+/* -- Mobile responsive: stack vertically -- */
 @media (max-width: 768px) {
     .header-with-images {
         flex-direction: column;
@@ -222,12 +222,12 @@ h2 {
   line-height: 1.8;
   font-family: 'Segoe UI', sans-serif;
 
-  /* Yogic glow background (same style as quote) */
+  /* --- Yogic glow background (same style as quote) --- */
 /background: rgba(240, 240, 250, 0.6);
   border-radius: 8px;
 }
 
-/* Tablet optimization */
+/* --- Tablet optimization --- */
 @media (max-width: 768px) {
   .about p {
     font-size: 1rem;  
@@ -236,7 +236,7 @@ h2 {
   }
 }
 
-/* Mobile optimization */
+/* --- Mobile optimization --- */
 @media (max-width: 600px) {
   .about p {
     font-size: 0.95rem;
@@ -375,7 +375,7 @@ h2 {
   position: relative;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 
-  /* ✨ Soft glowing border */
+  /* ---✨ Soft glowing border --- */
   border: 3px solid #a7d7c5;  /* light pastel green */
   box-shadow: 0 0 15px rgba(167, 215, 197, 0.8), 
               0 0 30px rgba(167, 215, 197, 0.5),
@@ -383,7 +383,7 @@ h2 {
   animation: softGlow 3s infinite alternate ease-in-out;
 }
 
-/* Glow animation */
+/* --- Glow animation --- */
 @keyframes softGlow {
   from {
     box-shadow: 0 0 10px rgba(167, 215, 197, 0.6),
@@ -395,7 +395,7 @@ h2 {
   }
 }
 
-/* Close Button */
+/* ---Close Button --- */
 .close {
   color: #2f4f4f;
   float: right;
@@ -409,7 +409,7 @@ h2 {
   color: #e63946; /* soft red on hover */
 }
 
-/* Timetable Titles */
+/* --- Timetable Titles --- */
 .modal-content h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -420,7 +420,7 @@ h2 {
   font-weight: 600;
 }
 
-/* Table Styling */
+/* --- Table Styling --- */
 .modal-content table {
   width: 100%;
   border-collapse: collapse;
@@ -448,7 +448,7 @@ h2 {
   background-color: #f9fbe7; /* soft light yellow-green */
 }
 
-/* Animation for modal */
+/* --- Animation for modal --- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -461,7 +461,7 @@ h2 {
 }
 
 
-/* Make footer stick to bottom */
+/* --- Make footer stick to bottom --- */
 
 html, body {
   height: 100%;              
@@ -472,11 +472,11 @@ html, body {
 }
 
 main {
-  flex: 1;  /* pushes footer down */
+  flex: 1;  /* --- pushes footer down --- */
 }
 
-/* Footer for All rights reserved and Developed by name */
-/* Minimal copyright footer */
+/* --- Footer for All rights reserved and Developed by name ---*/
+/* --- Minimal copyright footer --- */
 footer {
   text-align: center;
   padding: 6px 0;               /* slim but visible */
