@@ -5,13 +5,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-size: 16px;  /* --- good for laptops/desktops --- */
+    font-size: 16px;  
     line-height: 1.6;
     text-align: center;
     color: #333;
 }
 
-/* ---------------- HEADER ---------------- */
+
 header {
     background-image: url('images/Yoga.jpg');
     background-size: cover;
@@ -19,7 +19,7 @@ header {
     padding: 100px 20px;
     color: black;
 
-     /* --- fade-in animation --- */
+     
     opacity: 0;
     animation: fadeIn 2.5s ease-in-out forwards;
 }
@@ -45,7 +45,7 @@ h2 {
     margin: 0.5em 0;
 }
 
-/* ---------------- SECTIONS ---------------- */
+
 .about, .quote, .gallery, .contact, .timetable {
     padding: 20px;
     font-size: 1em;
@@ -58,7 +58,7 @@ h2 {
     border-radius: 10px;
 }
 
-/* ---------------- BUTTONS ---------------- */
+
 .whatsapp-button {
     display: inline-block;
     margin-top: 20px;
@@ -93,7 +93,7 @@ h2 {
     margin-right: 8px;
 }
 
-/* --Flexbox header with images on both sides-- */
+
 .header-with-images {
     display: flex;
     align-items: center;
@@ -103,27 +103,27 @@ h2 {
     margin: 20px 0;
 }
 
-/* --- Center text block ---*/
+
 .header-text {
     flex: 1;
 }
 
-/*--- Side images ---*/
+
 .side-image {
     width: 100px;
     height: 100px;
-    object-fit: cover;  /* --- keeps proportion --- */
-    border-radius: 10px; /* --- square with slightly rounded corners --- */
+    object-fit: cover;  
+    border-radius: 10px; 
 }
 
-/* --- Glow effect --- */
+
 .glow-image {
     box-shadow: 0 0 20px rgba(255, 165, 0, 0.6);
     border: 2px solid rgba(255, 165, 0, 0.8);
     border-radius: 12px;
 }
 
-/* -- Mobile responsive: stack vertically -- */
+
 @media (max-width: 768px) {
     .header-with-images {
         flex-direction: column;
@@ -134,7 +134,7 @@ h2 {
     }
 }
 
-/* ---------------- TIMETABLE ---------------- */
+
 .timetable {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -153,7 +153,7 @@ h2 {
     margin: 10px 0;
 }
 
-/* ---------------- CHECKLIST ---------------- */
+
 .checklist {
     list-style: none;
     padding: 0;
@@ -163,7 +163,7 @@ h2 {
     content: "✅ ";
 }
 
-/* ---------------- QUOTES ---------------- */
+
 .quote blockquote {
     font-size: 1.1em;
     font-style: italic;
@@ -173,24 +173,24 @@ h2 {
     margin: 20px auto;
     max-width: 600px;
     padding: 10px 15px;
-    border-left: 4px solid #6a5acd; /* --- purple accent --- */
+    border-left: 4px solid #6a5acd; 
     background: rgba(240, 240, 250, 0.6);
     border-radius: 8px;
 }
 
-/* ---------------- ABOUT ---------------- */
+
 .about {
-    background: #fafafa; /* --- very light calming background --- */
+    background: #fafafa; 
     padding: 40px 25px;
     max-width: 850px;
     margin: 40px auto;
     border-radius: 16px;
 
-    /* --- ✨ Soft yogic glow --- */
+    
     box-shadow: 0 0 20px rgba(255, 200, 150, 0.35);
 
     line-height: 1.8;
-    font-size: 1.15em;   /* --- increased slightly --- */
+    font-size: 1.15em;   
     color: #333;
     text-align: center;
     transition: transform 0.3s ease;
@@ -199,8 +199,8 @@ h2 {
 
 
 .about h2 {
-    font-size: 1.9em;     /* --- bigger heading --- */
-    color: #4a2c2a;       /* ---  earthy tone --- */
+    font-size: 1.9em;     
+    color: #4a2c2a;       
     margin-bottom: 10px;
 }
 
@@ -214,31 +214,31 @@ h2 {
   text-align: left;
   max-width: 650px;
   margin: 20px auto;
-  padding: 15px 18px;                /* --- inner space for glow --- */
-  font-size: 1.1rem;                 /* --- slightly bigger font --- */
-  color: #444;                       /* --- soft gray text --- */
+  padding: 15px 18px;                
+  font-size: 1.1rem;                 
+  color: #444;                       
   line-height: 1.8;
   font-family: 'Segoe UI', sans-serif;
 
-  /* --- Yogic glow background (same style as quote) --- */
-/background: rgba(240, 240, 250, 0.6);
+ 
+background: rgba(240, 240, 250, 0.6);
   border-radius: 8px;
 }
 
-/* --- Tablet optimization --- */
+
 @media (max-width: 768px) {
   .about p {
     font-size: 1rem;  
-    background: rgba(240, 240, 250, 0.5); /* --- slightly lighter --- */
+    background: rgba(240, 240, 250, 0.5); 
     padding: 10px 14px;
   }
 }
 
-/* --- Mobile optimization --- */
+
 @media (max-width: 600px) {
   .about p {
     font-size: 0.95rem;
-    background: rgba(240, 240, 250, 0.4); /* --- more transparent for calmness ---*/
+    background: rgba(240, 240, 250, 0.4); 
     padding: 8px 12px;
   }
 }
@@ -260,12 +260,12 @@ h2 {
 
 .about .checklist li::before {
     content: "✔";
-    color: #c47c48; /* warm yogic checkmark */
+    color: #c47c48; 
     position: absolute;
     left: 0;
 }
 
-/* ---------------- FLOATING BUTTON ---------------- */
+
 .floating-btn {
     position: fixed;
     bottom: 20px;
@@ -283,14 +283,14 @@ h2 {
     
 }
 
-/*-------------- Mobile Friendly Floating Button -----------------*/
+
 
 .floating-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 14px rgba(0,0,0,0.4);
 }
 
-/* ------------ smaller on mobiles --------------- */
+
 @media (max-width: 480px) {
     .floating-btn {
         font-size: 0.9em;
@@ -300,7 +300,7 @@ h2 {
     }
 }
 
-/* ---------------- RESPONSIVE FONTS ---------------- */
+
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -346,21 +346,21 @@ h2 {
 }
 
 
-/* --- Modal Background --- */
+
 .modal {
-  display: none; /* --- Hidden by default --- */
+  display: none; 
   position: fixed;
-  z-index: 1000; /* --- Stay on top --- */
+  z-index: 1000; 
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto; 
-  background-color: rgba(0, 0, 0, 0.6); /* --- semi-transparent background --- */
+  background-color: rgba(0, 0, 0, 0.6); 
   transition: opacity 0.3s ease;
 }
 
-/*----------------glowing border will give your timetable popup a meditative yoga vibe  ------ */
+
 
 .modal-content {
   background: linear-gradient(145deg, #ffffff, #f9f9f9);
@@ -373,15 +373,15 @@ h2 {
   position: relative;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 
-  /* ---✨ Soft glowing border --- */
-  border: 3px solid #a7d7c5;  /* --- light pastel green --- */
+  
+  border: 3px solid #a7d7c5;  
   box-shadow: 0 0 15px rgba(167, 215, 197, 0.8), 
               0 0 30px rgba(167, 215, 197, 0.5),
               0 0 45px rgba(167, 215, 197, 0.3);
   animation: softGlow 3s infinite alternate ease-in-out;
 }
 
-/* --- Glow animation --- */
+
 @keyframes softGlow {
   from {
     box-shadow: 0 0 10px rgba(167, 215, 197, 0.6),
@@ -393,7 +393,7 @@ h2 {
   }
 }
 
-/* ---Close Button --- */
+
 .close {
   color: #2f4f4f;
   float: right;
@@ -404,27 +404,27 @@ h2 {
 }
 
 .close:hover {
-  color: #e63946; /* --- soft red on hover --- */
+  color: #e63946; 
 }
 
-/* --- Timetable Titles --- */
+
 .modal-content h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #2c786c; /* --- calming green  --- */
+  color: #2c786c; 
   border-bottom: 2px solid #b2dfdb;
   padding-bottom: 10px;
   font-size: 22px;
   font-weight: 600;
 }
 
-/* --- Table Styling --- */
+
 .modal-content table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 15px;
   font-size: 16px;
-  background: #ffffffb0; /* --- soft transparent white --- */
+  background: #ffffffb0; 
   border-radius: 10px;
   overflow: hidden;
 }
@@ -437,16 +437,15 @@ h2 {
 }
 
 .modal-content th {
-  background-color: #a5d6a7; /* --- light green --- */
+  background-color: #a5d6a7; 
   color: #1b4332;
   font-weight: bold;
 }
 
 .modal-content tr:nth-child(even) {
-  background-color: #f9fbe7; /* --- soft light yellow-green --- */
+  background-color: #f9fbe7; 
 }
 
-/* --- Animation for modal --- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -459,7 +458,7 @@ h2 {
 }
 
 
-/* --- Make footer stick to bottom --- */
+
 
 html, body {
   height: 100%;              
@@ -470,36 +469,34 @@ html, body {
 }
 
 main {
-  flex: 1;  /* --- pushes footer down --- */
+  flex: 1;  
 }
 
-/* --- Footer for All rights reserved and Developed by name ---*/
-/* --- Minimal copyright footer --- */
 footer {
   text-align: center;
-  padding: 6px 0;               /* --- slim but visible --- */
-  font-size: 0.61rem;           /* --- small standard copyright size --- */
-  font-weight: normal;          /* --- ensure not bold --- */
-  color: #777;                  /* --- light grey text --- */
-  background: #f5f5f5;          /* --- soft neutral bg --- */
-  border-top: 1px solid #ddd;   /* --- subtle divider  --- */
+  padding: 6px 0;               
+  font-size: 0.61rem;           
+  font-weight: normal;          
+  color: #777;                  
+  background: #f5f5f5;          
+  border-top: 1px solid #ddd;   
 }
 
 footer .copyright {
-  font-family: "Georgia", serif;   /* --- elegant font --- */
-  font-size: 0.75rem;              /* --- small and subtle --- */
-  color: #666;                     /* --- soft grey --- */
+  font-family: "Georgia", serif;
+  font-size: 0.75rem;           
+  color: #666;                  
   margin: 4px 0;
 }
 
 footer .dev-note {
-  font-family: "Courier New", monospace;  /* --- developer-style font --- */
+  font-family: "Courier New", monospace;  
   font-size: 0.7rem;
   color: #444;
   margin: 2px 0;
 }
 
-/* --- Tablet optimization --- */
+
 @media (max-width: 768px) {
   footer {
     font-size: 0.6rem;
@@ -510,10 +507,9 @@ footer .dev-note {
   }
 }
 
-/* --- Mobile optimization --- */
 @media (max-width: 600px) {
   footer {
-    font-size: 0.55rem;         /* --- very compact on small screens --- */
+    font-size: 0.55rem;         
     padding: 4px 0;
   }
   footer .dev-note {
@@ -522,7 +518,7 @@ footer .dev-note {
 }
 
 
-/* --- Fallback Play Button style for Om sound --- */
+
 #playOmBtn {
   position: fixed;
   bottom: 80px;
@@ -549,17 +545,14 @@ footer .dev-note {
   transition: opacity 0.6s ease;
 }
 
-/*---first bug fix Fix: Elements must have sufficient color contrast ---*/
-/* ----- Improve text contrast accessibility ----- */
 
-/* --- Header: make text white + shadow over image for better contrast  ---*/
 header {
-  color: #fff; /* --- white text --- */
+  color: #fff; 
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
   position: relative;
 }
 header::before {
-  /* --- semi-transparent overlay behind text --- */
+  
   content: "";
   position: absolute;
   inset: 0;
@@ -568,36 +561,24 @@ header::before {
 }
 .header-text {
   position: relative;
-  z-index: 1; /* --- stay above overlay --- */
+  z-index: 1; 
 }
 
-/* --- Social button: dark text for better contrast on light background --- */
+
 .social-button {
   background-color: #eee;
-  color: #111; /* --- darker text than #333 --- */
+  color: #111; 
 }
 
-/* --- Quote: slightly darker text on light background --- */
+
 .quote blockquote {
   color: #222;
   background: rgba(240,240,250,0.8);
 }
 
-/* --- Footer: darker gray text on pale background --- */
+
 footer,
 footer .copyright,
 footer .dev-note {
   color: #444; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
