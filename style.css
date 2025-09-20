@@ -550,3 +550,44 @@ footer .dev-note {
   transition: opacity 0.6s ease;
 }
 
+/*---first bug fix Fix: Elements must have sufficient color contrast ---*/
+/* ----- Improve text contrast accessibility ----- */
+
+/* --- Header: make text white + shadow over image for better contrast  ---*/
+header {
+  color: #fff; /* --- white text --- */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  position: relative;
+}
+header::before {
+  /* --- semi-transparent overlay behind text --- */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 0;
+}
+.header-text {
+  position: relative;
+  z-index: 1; /* --- stay above overlay --- */
+}
+
+/* --- Social button: dark text for better contrast on light background --- */
+.social-button {
+  background-color: #eee;
+  color: #111; /* --- darker text than #333 --- */
+}
+
+/* --- Quote: slightly darker text on light background --- */
+.quote blockquote {
+  color: #222;
+  background: rgba(240,240,250,0.8);
+}
+
+/* --- Footer: darker gray text on pale background --- */
+footer,
+footer .copyright,
+footer .dev-note {
+  color: #444; 
+}
+
